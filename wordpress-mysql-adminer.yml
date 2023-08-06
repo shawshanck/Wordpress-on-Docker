@@ -26,7 +26,7 @@ services:
       MYSQL_DATABASE: exampledb
       MYSQL_USER: exampleuser
       MYSQL_PASSWORD: examplepass
-      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+      MYSQL_ROOT_PASSWORD: notSecureChangeMe
     volumes:
       - /root/docker/wordpress/db:/var/lib/mysql
 
