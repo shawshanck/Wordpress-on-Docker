@@ -7,3 +7,9 @@ wget https://raw.githubusercontent.com/shawshanck/Wordpress-on-Docker/main/insta
 chmod +x install-wp.sh
 ./install-wp.sh
 ```
+
+```
+wget https://raw.githubusercontent.com/shawshanck/Wordpress-on-Docker/main/test.sh
+chmod +x test.sh
+./test.sh
+```
