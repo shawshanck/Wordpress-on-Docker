@@ -31,3 +31,8 @@ volumes:
   wordpress:
   adminer:
   db:
+
+  networks:
+  default:
+    name: my-main-net
+    external: true
