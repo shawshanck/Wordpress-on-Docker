@@ -1,5 +1,5 @@
 # Wordpress-on-Docker
-This script will automatically instal Wordpress, MySQL and Adminer on Docker.
+This script will automatically instal Wordpress, MySQL and phpMyAdmin on Docker.
 
 ```
 mkdir docker && cd docker
