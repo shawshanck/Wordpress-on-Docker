@@ -1,5 +1,13 @@
-# Wordpress-on-Docker
-This script will automatically instal Wordpress, MySQL and phpMyAdmin on Docker.
+<h1 align="center">"Wordpress on Docker"</h1></p>
+
+<p align="center">
+<img src="https://cdn-thumbs.imagevenue.com/ee/72/ee/ME16QOK6_b.png" width="100">
+<br>
+</p>
+
+<p align="center">With this script, you can automatically install Wordpress, MYSQL & phpMyAdmin on Docker.</p>
+
+>**Note**: Without Docker and Docker-Compose it fails. [First install Docker and Docker-Compose from here](https://github.com/shawshanck/Docker-and-Docker-Compose).
 
 <hr>
 
