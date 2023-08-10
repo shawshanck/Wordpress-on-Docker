@@ -38,20 +38,20 @@ installApps()
 startInstall() 
 {
     clear
-    echo "#######################################################"
-    echo "###         Preparing for Installation              ###"
-    echo "#######################################################"
-    echo ""
+    echo -e "*******************************************************"
+    echo -e "***         Preparing for Installation              ***"
+    echo -e "*******************************************************"
+    echo -e ""
     sleep 3s
 
 
     if [[ "$WMP" == [yY] ]]; then
-        echo "####################################################"
-        echo "###  Installing Wordpress, MYSQL and phpMyAdmin  ###"
-        echo "####################################################"
+        echo -e "*******************************************************"
+        echo -e "***     Install Wordpress, MYSQL & phpMyAdmin       ***"
+        echo -e "*******************************************************"
     
         # Starting bash to create user defined parameters
-        echo -e "${GREEN}    1. Please define each parameters:${NC}"
+        echo -e "${MAGENTA}      1.${NC}${GREEN} Please define each parameters:${NC}"
 
         mkdir -p docker/wordpress-mysql-phpmyadmin
         cd docker/wordpress-mysql-phpmyadmin
@@ -68,7 +68,7 @@ dpss=${dpss:-"examplepass"}
 read -e -p "Please create a Name for Database: " -i "exampledb" dbnm
 dbnm=${dbnm:-"exampledb"}
 
-read -e -p "Please create a Password for Database Root: " -i "notSecureChangeMe" rpss
+read -e -p "Please create a "Root" Password for Database: " -i "notSecureChangeMe" rpss
 rpss=${rpss:-"notSecureChangeMe"}
 
 read -e -p "Please enter a Port for phpMyAdmin: " -i "8282" ppp
@@ -125,7 +125,7 @@ volumes:
 
 
 	echo ""        
-	echo -e "${GREEN}    2. Running the docker-compose.yml to install and start Wordpress, MYSQL and phpMyAdmin${NC}"
+	echo -e "${MAGENTA}      2.${NC}${GREEN} Running the docker-compose.yml to install and start Wordpress, MYSQL and phpMyAdmin${NC}"
         echo ""
         echo ""
 
@@ -133,7 +133,7 @@ volumes:
           sudo docker-compose up -d
 
 	echo ""
-	echo -e "${GREEN}    3. Installation Completed. Details are:${NC}"
+	echo -e "${MAGENTA}      3.${NC}${GREEN} Installation Completed. Details are:${NC}"
         echo -e ""
         echo -e "${NC}     Wordpress is running on: http://${GREEN}${myIP}:${wpp:-"8181"}${NC}"
         echo -e ""
@@ -172,7 +172,7 @@ echo -e ""
 echo -e "${YELLOW}------------------------------------------------${NC}"
 echo -e ""
 
-PS3="Please enter 1 to install NGinX Proxy Manager or 2 to exit setup. "
+PS3="Please enter 1 to install Wordpress, MYSQL and phpMyAdmin or 2 to exit setup. "
 select _ in \
     "Install Wordpress, MYSQL and phpMyAdmin" \
     "Exit"
